@@ -3,7 +3,7 @@ import cheerio from "cheerio";
 import { createObjectCsvWriter } from "csv-writer"
 
 
-const url = "https://www.lavuelta.es/en/rankings/stage-4";
+const url = "URL_of_the_product_page";
 const AxiosInstance = axios.create();
 const csvWriter = createObjectCsvWriter({
     path: "./output.csv",
