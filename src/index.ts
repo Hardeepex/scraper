@@ -28,9 +28,9 @@ AxiosInstance.get(url)
     const rankings: productData[] = [];
 
     rankingsTableRows.each((i, elem) => {
-      const name: string = $(elem).find("SELECTOR_FOR_NAME").text().trim();
-      const price: string = $(elem).find("SELECTOR_FOR_PRICE").text().trim();
-      const description: string = $(elem).find("SELECTOR_FOR_DESCRIPTION").text().trim();
+      const name: string = $(elem).find(".product-name").text().trim();
+      const price: string = $(elem).find(".product-price").text().trim();
+      const description: string = $(elem).find(".product-description").text().trim();
       rankings.push({ name, price, description });
     });
     csvWriter.writeRecords(rankings).then(() => console.log("Written to file"))
