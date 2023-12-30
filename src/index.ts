@@ -10,7 +10,7 @@ const csvWriter = createObjectCsvWriter({
     header: [
         {id: "name", title: "Name"},
         {id: "price", title: "Price"},
-        {id: "description", title: "Description"},
+        {id: "description", title: "Description"}
     ]
 })
 
