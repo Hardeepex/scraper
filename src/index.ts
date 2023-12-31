@@ -1,3 +1,4 @@
+import config from "./config.json";
 import axios from "axios";
 import cheerio from "cheerio";
 import { createObjectCsvWriter } from "csv-writer"
@@ -28,9 +29,9 @@ AxiosInstance.get(url)
     const rankings: productData[] = [];
 
     rankingsTableRows.each((i, elem) => {
-      const name: string = $(elem).find(".product-name").text().trim();
-      const price: string = $(elem).find(".product-price").text().trim();
-      const description: string = $(elem).find(".product-description").text().trim();
+      const name: string = $(elem).find(config.selectors.name).text().trim();
+      const price: string = $(elem).find(config.selectors.price).text().trim();
+      const description: string = $(elem).find(config.selectors.description).text().trim();
       rankings.push({ name, price, description });
     });
     csvWriter.writeRecords(rankings).then(() => console.log("Written to file"))
