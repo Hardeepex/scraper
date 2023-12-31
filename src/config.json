@@ -1,0 +1,12 @@
+{
+  "selectors": {
+    "name": ".product-name",
+    "price": ".product-price",
+    "description": ".product-description"
+  },
+  "xpaths": {
+    "name": "//div[@class='product-name']",
+    "price": "//div[@class='product-price']",
+    "description": "//div[@class='product-description']"
+  }
+}
